@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cotion: Real-Time Document Collaboration Platform
 
-## Getting Started
+## Introduction
+Cotion is a modern workspace solution offering real-time collaboration with rich document management features. Designed for teams and individuals, it simplifies content creation through an intuitive interface, secure authentication, and seamless file handling while maintaining full mobile responsiveness.
 
-First, run the development server:
+### Key Features
+- **Real-Time Database** 🔗  
+- **Rich Text Editor** 📝 (block-based formatting, nested documents)  
+- **Light/Dark Mode** 🌓  
+- **Infinite Nested Documents** 🌲  
+- **Soft Delete & Recovery** 🗑️ 🔄📄  
+- **Authentication** 🔐 (Clerk integration)  
+- **File Management** (upload/delete/replace)  
+- **Dynamic Icons** 🌠 (real-time updates)  
+- **Collapsible Sidebar** ↕ ➡🔀⬅  
+- **Web Publishing** 🌐  
+- **Mobile Optimization** 📱  
+- **Landing Page** 🛬  
+- **Custom Document Covers** 🖼️  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Installation
+### Prerequisites
+- Node.js v18+
+- npm v9+
+- [Convex](https://convex.dev) account
+- [Clerk](https://clerk.dev) account
+
+### Setup
+1. Clone the repository:
+```
+git clone https://github.com/Chamod07/Cotion.git
+cd Cotion
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```
+npm install
+```
+3. Configure environment variables (create `.env.local`):
+```
+NEXT_PUBLIC_CONVEX_URL="your_convex_deployment_url"
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_clerk_pub_key"
+CLERK_SECRET_KEY="your_clerk_secret"
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+```
+4. Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Usage
+### Getting Started
+1. Sign up/in via Clerk authentication
+2. Create documents with `+ New` button
+3. Use slash (`/`) commands in the editor to:
+- Insert headers, lists, code blocks
+- Upload images/files
+- Toggle live-publish mode
+4. Right-click documents for:
+- Nested child creation
+- Cover image customization
+- Soft deletion/recovery
 
-To learn more about Next.js, take a look at the following resources:
+### Key Commands
+| Action                | Command          |
+|-----------------------|------------------|
+| Start dev server      | `npm run dev`    |
+| Build for production  | `npm run build`  |
+| Deploy to Convex      | `npx convex dev` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes with descriptive messages
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Issue Tracking**:  
+- Report bugs via [GitHub Issues](https://github.com/yourusername/docucollab/issues)
+- Use labels for `bug`, `enhancement`, or `documentation`
 
-## Deploy on Vercel
+## License
+Distributed under MIT License. See `LICENSE` for details.  
+Permissions include commercial use, modification, and distribution.  
+**Limitations**: License must be included in all copies/modifications.  
+**No Liability**: Software provided "as is" without warranty.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**[⬆ Back to Top](#cotion-real-time-document-collaboration-platform)**
+
